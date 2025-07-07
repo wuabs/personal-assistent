@@ -3,20 +3,20 @@ from langchain_experimental.utilities import PythonREPL
 from langchain_community.tools import DuckDuckGoSearchRun
 
 def get_tools(llm):
-    # 🔧 Python REPL инструмент
+    # Python REPL инструмент
     repl_tool = PythonREPL()
 
-    # 🔧 Инструмент обобщения
+    # Инструмент обобщения
     def summarize_tool(text):
         prompt = f"Сделай краткое и понятное обобщение текста:\n{text}"
         return llm.invoke(prompt)
 
-    # 🔧 Инструмент критики
+    # Инструмент критики
     def critic_tool(text):
         prompt = f"Проанализируй это действие или поведение: {text}"
         return llm.invoke(prompt)
 
-    # 🔧 Поисковик
+    # Поисковик
     duckduckgo_tool = DuckDuckGoSearchRun()
     
 
