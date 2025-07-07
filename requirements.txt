@@ -1,3 +1,9 @@
 gradio
+langchain-openai
+langchain_experimental
+python-dotenv
 langchain
-openai
+langchain-huggingface
+huggingface_hub
+langchain-community
+duckduckgo-search
